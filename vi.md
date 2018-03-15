@@ -1,6 +1,6 @@
-### Hiệu ứng Bouncing loader (Đang tải)
+### Hoạt ảnh nảy lên khi đang tải (Đang tải)
 
-Tạo một hiệu ứng đang tải.
+Tạo một hoạt ảnh đang tải.
 
 #### HTML
 
@@ -88,16 +88,16 @@ Tạo một hiệu ứng đang tải.
 
 #### Giải thích
 
-Ghi chú: `1rem` thường là bằng `16px`.
+Ghi chú: `1rem` thường bằng `16px`.
 
-1. `@keyframes` định nghĩa một hiệu ứng có 2 trạng thái, nơi mà các phẩn tử thay đổi `opacity` và được dịch trên một bề mặt 2D sử dụng `transform: translateY()`.
+1. `@keyframes` định nghĩa một hoạt ảnh có 2 trạng thái, nơi mà các phẩn tử thay đổi `opacity` và được dịch trên một bề mặt 2D sử dụng `transform: translateY()`.
 
-2. `.bouncing-loader` là phần tử mẹ của các vòng tròn xoay và sử dụng `display: flex`, `justify-content: center` để căn
+2. `.bouncing-loader` đây là vùng chính của chấm tròn nảy lên và sử dụng `display: flex`, `justify-content: center` để căn
 chỉnh vị trí của chúng ra giữa
 
 3. `.bouncing-loader > div`, mục đích của 3 thẻ `div` con là để style. Các thẻ `div` đã được đưa ra sẵn một chiều rộng và chiều cao là `1rem`, sử dung `border-radius: 50%` để chuyển chúng từ hình vuông sang hình tròn.
 
-4. `margin: 3rem 0.2rem` chỉ ra cụ thể rằng mỗi hình tròn có một margin top/bottom là `3rem` và left/right là `0.2rem`,
+4. `margin: 3rem 0.2rem` chỉ ra cụ thể rằng mỗi hình tròn có khoảng cách với top/bottom là `3rem` và left/right là `0.2rem`,
 vì vậy để chúng tách rời ra vs nhau thì hãy cho chúng một khoảng trống.
 
 5. `animation` là viết tắt của những thuộc tính animation được sử dụng sau: `animation-name`, `animation-duration`, `animation-iteration-count`, `animation-direction`
@@ -108,7 +108,7 @@ vì vậy để chúng tách rời ra vs nhau thì hãy cho chúng một khoản
 
 #### Trình duyệt hỗ trợ
 
-<span class="snippet__support-note">✅ No caveats.</span>
+<span class="snippet__support-note">✅ Tương thích tất cả.</span>
 
 * https://caniuse.com/#feat=css-animation
 
@@ -153,7 +153,7 @@ html {
 #### Giải thích
 
 1. `box-sizing: border-box` làm cho việc thêm `padding` hoặc `border` không ảnh hưởng đến `width` hoặc `height` của phần tử
-2. `box-sizing: inherit` làm cho một phần tử tuân theo quy tắc `box-sizing` của phần tử cha.
+2. `box-sizing: inherit` làm cho một phần tử kế thừa `box-sizing` của phần tử cha.
 
 #### Trình duyệt hỗ trợ
 
@@ -167,7 +167,7 @@ html {
 
 Đảm bảo rằng các phần tử con đã loại bỏ hết các phần tử con của nó.
 
-###### Ghi chú: Điều này chỉ hữu ích nếu bạn vẫn dùng float để xây dựng giao diện. Hãy xem xét sử dụng một cách tiếp cận hiện đại hơn với giao diện flexbox hoặc giao diện lưới(grid).
+###### Ghi chú: Điều này chỉ hữu ích khi bạn dùng float để xây dựng bố cục. Hãy xem xét sử dụng một cách tiếp cận bố cục hiện đại hơn với flexbox hoặc grid.
 
 #### HTML
 
@@ -286,7 +286,7 @@ Thay đổi cửa số trình duyệt để thấy tỉ lệ của phần tử v
 #### Giải thích
 
 `padding-top` đặt ở `::before` phần tử mẫu khiến chiếu cao của phần tử luôn bằng một tỉ lệ với chiều rộng của nó.
- `100%` do đó chiều cao của phần từ luôn luôn cùng với `100%` chiều rộng, tạo 1 khung responsive
+ `100%` do đó chiều cao của phần từ luôn luôn cùng với `100%` chiều rộng, tạo 1 hình vuông tương ứng
 square.
 
 Phương hức này cũng cho phép nội dung được đặt bên trong của phần tử một cách bình thường.
@@ -338,12 +338,12 @@ Phân chia đều cho các phần tử con bên trong phần tử cha.
 }
 </style>
 
-#### Giải thích
+#### Giải thích 
 
 1. `display: flex` bật flexbox.
-2. `justify-content: space-between` phân chia đều các phần tử con theo chiều ngang. Phần tử đầu tiền được đặt ở góc trái, còn phần từ cuối cùng được đặt ở góc phải.
+2. `justify-content: space-between` phân chia đều các phần tử con theo chiều ngang. Phần tử đầu tiền được đặt ở cạnh trái, còn phần từ cuối cùng được đặt ở cạnh phải.
 
-Alternatively, use `justify-content: space-around` to distribute the children with space around them, rather than between them.
+Cách khác, sử dụng justify-content: space-around giãn xung quanh thẻ con một khoảng đều, chứ không phải giữa chúng
 
 #### Browser support
 
@@ -396,7 +396,7 @@ Alternatively, use `justify-content: space-around` to distribute the children wi
 
 1. `display: flex` bật flexbox.
 2. `justify-content: center` đặt trung tâm phần tử con theo chiều ngang.
-3. `align-items: center` đặt trung tâm phần tử con theo chiều .
+3. `align-items: center` đặt trung tâm phần tử con theo chiều dọc.
 
 #### Trình duyệt hỗ trợ
 
@@ -665,7 +665,7 @@ Tạo 1 hình vòng tròn với CSS thuần.
 
 `border-radius: 50%` làm cong viền của phần tử để tạo vòng tròn
 
-Bời vì vòng tròn có góc bằng nhau tại bất kỳ điểm nào, nên `chiều rộng` và `chiều cao` phải giống nhau. Nếu khác nhau sẽ tạo hình eclipse.
+Bời vì vòng tròn có cạnh bằng nhau tại bất kỳ điểm nào, nên `chiều rộng` và `chiều cao` phải giống nhau. Nếu khác nhau sẽ tạo hình eclipse.
 
 #### Trình duyệt hỗ trợ
 
@@ -677,7 +677,7 @@ Bời vì vòng tròn có góc bằng nhau tại bất kỳ điểm nào, nên `
 
 ### Tùy chỉnh thanh cuôn
 
-Tùy chỉnh mẫu thanh cuộn cho tài liệu và các phần tử với scrollable overflow, trên các nền tảng WebKit.
+Tùy chỉnh mẫu thanh cuộn cho document và các phần tử với scrollable overflow, trên các nền tảng WebKit.
 
 #### HTML
 
@@ -802,7 +802,7 @@ Thay đỏi kiểu của văn bản được chọn.
 
 #### Giải thích
 
-`::selection` định nghĩa bộ chọn mẫu trên 1 phần tử để tạo mẫu văn bản bên trong nó khi được chọn. Lưu ý rằng nếu bạn không kết hợp các bộ chọn khác, mẫu của bạn sẽ được áp dụng tại mức tài liệu gốc, với bất cứ phần tử được chọn nào 
+`::selection` định nghĩa bộ chọn giả trên 1 phần tử để tạo mẫu văn bản bên trong nó khi được chọn. Lưu ý rằng nếu bạn không kết hợp các bộ chọn khác, mẫu của bạn sẽ được áp dụng tại mức tài liệu gốc, với bất cứ phần tử được chọn nào 
 
 #### Trình duyệt hỗ trợ
 
@@ -884,13 +884,13 @@ Tạo 1 bóng tương tự như `box-shadow` nhưng dựa trên màu của chín
 
 #### Giải thích
 
-Phần này yêu cầu 1 tập định nghĩa phức tạp để thực hiện đúng, như là phần tử mẫu sẽ được đặt ngay dưới chính nó trong khi vẫn hiện.
+Phần này yêu cầu 1 tập định nghĩa phức tạp để thực hiện được, như là phần tử mẫu sẽ được đặt ngay dưới chính nó trong khi vẫn hiện.
 
-1. `position: relative` ở phần tử cha thiết lập định nghĩa vị trí Cartesian cho các phần tử con.
-2. `z-index: 1` thiếp lập 1 lớp định nghĩa mới
-3. `position: relative` ở phần tử con thiết lập dịnh nghĩa vị trí cho phần tử mẫu
+1. `position: relative` ở phần tử cha thiết lập định vị vị trí Cartesian cho các phần tử con.
+2. `z-index: 1` thiếp lập 1 lớp xếp chồng.
+3. `position: relative` ở phần tử con thiết lập định vị vị trí cho phần tử mẫu
 4. `::after` định nghĩa 1 phần tử mẫu
-5. `position: absolute` tách phần tử mẫu ra khỏi luồng tài liệu và đặt nó ở vị trí relation với cha nó.
+5. `position: absolute` tách phần tử mẫu ra khỏi document và đặt nó ở vị trí quan hệ với cha nó.
 6. `width: 100%` and `height: 100%` làm kích thước phần tử mẫu lấp đầy kích thước cha nó, làm nó cần bằng về kích thước.
 7. `background: inherit` khiến phần tử mẫu thừa kế quy định về góc tuyến tính trên phần tử.
 8. `top: 0.5rem` làm nhô phần tử mẫu xuống dưới cha nó.
